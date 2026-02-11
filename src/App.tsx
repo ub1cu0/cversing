@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import GameLayout from './components/layout/GameLayout';
 import Home from './pages/Home';
 import Infinite from './pages/Infinite';
@@ -8,7 +8,7 @@ import Wiki from './pages/Wiki';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GameLayout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </GameLayout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
