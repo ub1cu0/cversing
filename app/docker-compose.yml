@@ -1,0 +1,11 @@
+services:
+  c-guessr:
+    build: .
+    container_name: c-guessr
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./logs:/var/log/nginx

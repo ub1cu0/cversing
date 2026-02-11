@@ -1,0 +1,177 @@
+[
+  {
+    "code": "long mystery_function(char *param_1)\r\n{\r\n  char *local_10;\r\n  for (local_10 = param_1; *local_10 != '\\0'; local_10 = local_10 + 1) {\r\n  }\r\n  return (long)local_10 - (long)param_1;\r\n}",
+    "name": "strlen",
+    "description": "Calculates the length of a string."
+  },
+  {
+    "code": "char * mystery_function(char *param_1,char *param_2)\r\n{\r\n  char cVar1;\r\n  char *local_28;\r\n  char *local_20;\r\n  local_28 = param_2;\r\n  local_20 = param_1;\r\n  do {\r\n    *local_20 = *local_28;\r\n    cVar1 = *local_20;\r\n    local_28 = local_28 + 1;\r\n    local_20 = local_20 + 1;\r\n  } while (cVar1 != '\\0');\r\n  return param_1;\r\n}",
+    "name": "strcpy",
+    "description": "Copies a string to a destination buffer."
+  },
+  {
+    "code": "long mystery_function(long param_1,long param_2,ulong param_3)\r\n{\r\n  ulong local_10;\r\n  for (local_10 = 0; (local_10 < param_3 && (*(char *)(local_10 + param_2) != '\\0'));\r\n      local_10 = local_10 + 1) {\r\n    *(undefined1 *)(local_10 + param_1) = *(undefined1 *)(local_10 + param_2);\r\n  }\r\n  for (; local_10 < param_3; local_10 = local_10 + 1) {\r\n    *(undefined1 *)(local_10 + param_1) = 0;\r\n  }\r\n  return param_1;\r\n}",
+    "name": "strncpy",
+    "description": "Copies a fixed number of bytes from a string."
+  },
+  {
+    "code": "long mystery_function(long param_1,char *param_2)\r\n{\r\n  long lVar1;\r\n  char *local_28;\r\n  char *local_10;\r\n  lVar1 = strlen(param_1);\r\n  local_28 = param_2;\r\n  local_10 = (char *)(lVar1 + param_1);\r\n  while (*local_28 != '\\0') {\r\n    *local_10 = *local_28;\r\n    local_28 = local_28 + 1;\r\n    local_10 = local_10 + 1;\r\n  }\r\n  *local_10 = '\\0';\r\n  return param_1;\r\n}",
+    "name": "strcat",
+    "description": "Concatenates two strings."
+  },
+  {
+    "code": "long mystery_function(long param_1,char *param_2,long param_3)\r\n{\r\n  long lVar1;\r\n  long local_30;\r\n  char *local_28;\r\n  char *local_10;\r\n  lVar1 = strlen(param_1);\r\n  local_30 = param_3;\r\n  local_28 = param_2;\r\n  local_10 = (char *)(lVar1 + param_1);\r\n  while ((local_30 != 0 && (*local_28 != '\\0'))) {\r\n    *local_10 = *local_28;\r\n    local_30 = local_30 + -1;\r\n    local_28 = local_28 + 1;\r\n    local_10 = local_10 + 1;\r\n  }\r\n  *local_10 = '\\0';\r\n  return param_1;\r\n}",
+    "name": "strncat",
+    "description": "Concatenates two strings with a size limit."
+  },
+  {
+    "code": "int mystery_function(byte *param_1,byte *param_2)\r\n{\r\n  byte *local_18;\r\n  byte *local_10;\r\n  local_18 = param_2;\r\n  for (local_10 = param_1; (*local_10 != 0 && (*local_10 == *local_18)); local_10 = local_10 + 1) {\r\n    local_18 = local_18 + 1;\r\n  }\r\n  return (uint)*local_10 - (uint)*local_18;\r\n}",
+    "name": "strcmp",
+    "description": "Compares two strings."
+  },
+  {
+    "code": "int mystery_function(byte *param_1,byte *param_2,ulong param_3)\r\n{\r\n  int iVar1;\r\n  ulong local_20;\r\n  byte *local_18;\r\n  byte *local_10;\r\n  local_20 = param_3;\r\n  local_18 = param_2;\r\n  local_10 = param_1;\r\n  if (param_3 == 0) {\r\n    iVar1 = 0;\r\n  }\r\n  else {\r\n    for (; ((1 < local_20 && (*local_10 != 0)) && (*local_10 == *local_18)); local_10 = local_10 + 1\r\n        ) {\r\n      local_18 = local_18 + 1;\r\n      local_20 = local_20 - 1;\r\n    }\r\n    iVar1 = (uint)*local_10 - (uint)*local_18;\r\n  }\r\n  return iVar1;\r\n}",
+    "name": "strncmp",
+    "description": "Compares two strings up to a fixed length."
+  },
+  {
+    "code": "char * mystery_function(char *param_1,char param_2)\r\n{\r\n  char cVar1;\r\n  char *local_10;\r\n  local_10 = param_1;\r\n  do {\r\n    if (*local_10 == param_2) {\r\n      return local_10;\r\n    }\r\n    cVar1 = *local_10;\r\n    local_10 = local_10 + 1;\r\n  } while (cVar1 != '\\0');\r\n  return (char *)0x0;\r\n}",
+    "name": "strchr",
+    "description": "Locates the first occurrence of a character in a string."
+  },
+  {
+    "code": "char * mystery_function(char *param_1,char param_2)\r\n{\r\n  char cVar1;\r\n  char *local_20;\r\n  char *local_10;\r\n  local_10 = (char *)0x0;\r\n  local_20 = param_1;\r\n  do {\r\n    if (*local_20 == param_2) {\r\n      local_10 = local_20;\r\n    }\r\n    cVar1 = *local_20;\r\n    local_20 = local_20 + 1;\r\n  } while (cVar1 != '\\0');\r\n  return local_10;\r\n}",
+    "name": "strrchr",
+    "description": "Locates the last occurrence of a character in a string."
+  },
+  {
+    "code": "char * mystery_function(char *param_1,undefined8 param_2)\r\n{\r\n  int iVar1;\r\n  undefined8 uVar2;\r\n  char *local_20;\r\n  uVar2 = strlen(param_2);\r\n  local_20 = param_1;\r\n  while( true ) {\r\n    if (*local_20 == '\\0') {\r\n      return (char *)0x0;\r\n    }\r\n    iVar1 = memcmp(local_20,param_2,uVar2);\r\n    if (iVar1 == 0) break;\r\n    local_20 = local_20 + 1;\r\n  }\r\n  return local_20;\r\n}",
+    "name": "strstr",
+    "description": "Locates a substring within a string."
+  },
+  {
+    "code": "undefined8 mystery_function(undefined8 param_1)\r\n{\r\n  long lVar1;\r\n  void *pvVar2;\r\n  undefined8 uVar3;\r\n  lVar1 = strlen(param_1);\r\n  pvVar2 = malloc(lVar1 + 1U);\r\n  if (pvVar2 == (void *)0x0) {\r\n    uVar3 = 0;\r\n  }\r\n  else {\r\n    uVar3 = memcpy(pvVar2,param_1,lVar1 + 1U);\r\n  }\r\n  return uVar3;\r\n}",
+    "name": "strdup",
+    "description": "Duplicates a string using malloc."
+  },
+  {
+    "code": "undefined1 * mystery_function(undefined1 *param_1,undefined1 *param_2,long param_3)\r\n{\r\n  long local_30;\r\n  undefined1 *local_18;\r\n  undefined1 *local_10;\r\n  local_30 = param_3;\r\n  local_18 = param_2;\r\n  local_10 = param_1;\r\n  while (local_30 != 0) {\r\n    *local_10 = *local_18;\r\n    local_30 = local_30 + -1;\r\n    local_18 = local_18 + 1;\r\n    local_10 = local_10 + 1;\r\n  }\r\n  return param_1;\r\n}",
+    "name": "memcpy",
+    "description": "Copies a memory area."
+  },
+  {
+    "code": "undefined1 * mystery_function(undefined1 *param_1,undefined1 *param_2,long param_3)\r\n{\r\n  long local_40;\r\n  undefined1 *local_28;\r\n  undefined1 *local_20;\r\n  undefined1 *local_18;\r\n  undefined1 *local_10;\r\n  local_40 = param_3;\r\n  local_18 = param_2;\r\n  local_10 = param_1;\r\n  if (param_1 < param_2) {\r\n    while (local_40 != 0) {\r\n      *local_10 = *local_18;\r\n      local_40 = local_40 + -1;\r\n      local_18 = local_18 + 1;\r\n      local_10 = local_10 + 1;\r\n    }\r\n  }\r\n  else {\r\n    local_40 = param_3;\r\n    local_28 = param_1 + param_3 + -1;\r\n    local_20 = param_2 + param_3 + -1;\r\n    while (local_40 != 0) {\r\n      *local_28 = *local_20;\r\n      local_40 = local_40 + -1;\r\n      local_28 = local_28 + -1;\r\n      local_20 = local_20 + -1;\r\n    }\r\n  }\r\n  return param_1;\r\n}",
+    "name": "memmove",
+    "description": "Copies a memory area safely (handling overlap)."
+  },
+  {
+    "code": "undefined1 * mystery_function(undefined1 *param_1,undefined1 param_2,long param_3)\r\n{\r\n  long local_30;\r\n  undefined1 *local_10;\r\n  local_30 = param_3;\r\n  local_10 = param_1;\r\n  while (local_30 != 0) {\r\n    *local_10 = param_2;\r\n    local_30 = local_30 + -1;\r\n    local_10 = local_10 + 1;\r\n  }\r\n  return param_1;\r\n}",
+    "name": "memset",
+    "description": "Fills memory with a constant byte."
+  },
+  {
+    "code": "int mystery_function(byte *param_1,byte *param_2,long param_3)\r\n{\r\n  long local_30;\r\n  byte *local_18;\r\n  byte *local_10;\r\n  local_30 = param_3;\r\n  local_18 = param_2;\r\n  local_10 = param_1;\r\n  while( true ) {\r\n    if (local_30 == 0) {\r\n      return 0;\r\n    }\r\n    if (*local_10 != *local_18) break;\r\n    local_10 = local_10 + 1;\r\n    local_18 = local_18 + 1;\r\n    local_30 = local_30 + -1;\r\n  }\r\n  return (uint)*local_10 - (uint)*local_18;\r\n}",
+    "name": "memcmp",
+    "description": "Compares two memory areas."
+  },
+  {
+    "code": "char * mystery_function(char *param_1,char param_2,long param_3)\r\n{\r\n  long local_30;\r\n  char *local_10;\r\n  local_30 = param_3;\r\n  local_10 = param_1;\r\n  while( true ) {\r\n    if (local_30 == 0) {\r\n      return (char *)0x0;\r\n    }\r\n    if (*local_10 == param_2) break;\r\n    local_10 = local_10 + 1;\r\n    local_30 = local_30 + -1;\r\n  }\r\n  return local_10;\r\n}",
+    "name": "memchr",
+    "description": "Scans memory for a character."
+  },
+  {
+    "code": "undefined8 mystery_function(int param_1)\r\n{\r\n  undefined8 uVar1;\r\n  if ((param_1 < 0x30) || (0x39 < param_1)) {\r\n    uVar1 = 0;\r\n  }\r\n  else {\r\n    uVar1 = 1;\r\n  }\r\n  return uVar1;\r\n}",
+    "name": "isdigit",
+    "description": "Checks if a character is a digit (0-9)."
+  },
+  {
+    "code": "undefined8 mystery_function(int param_1)\r\n{\r\n  undefined8 uVar1;\r\n  if ((((param_1 == 0x20) || (param_1 == 9)) || (param_1 == 10)) ||\r\n     (((param_1 == 0xb || (param_1 == 0xc)) || (param_1 == 0xd)))) {\r\n    uVar1 = 1;\r\n  }\r\n  else {\r\n    uVar1 = 0;\r\n  }\r\n  return uVar1;\r\n}",
+    "name": "isspace",
+    "description": "Checks if a character is a white-space character."
+  },
+  {
+    "code": "int mystery_function(int param_1)\r\n{\r\n  if ((0x40 < param_1) && (param_1 < 0x5b)) {\r\n    param_1 = param_1 + 0x20;\r\n  }\r\n  return param_1;\r\n}",
+    "name": "tolower",
+    "description": "Converts a character to lowercase."
+  },
+  {
+    "code": "int mystery_function(int param_1)\r\n{\r\n  if ((0x60 < param_1) && (param_1 < 0x7b)) {\r\n    param_1 = param_1 + -0x20;\r\n  }\r\n  return param_1;\r\n}",
+    "name": "toupper",
+    "description": "Converts a character to uppercase."
+  },
+  {
+    "code": "undefined8 mystery_function(int param_1)\r\n{\r\n  undefined8 uVar1;\r\n  if ((param_1 < 0x41) || (0x5a < param_1)) {\r\n    uVar1 = 0;\r\n  }\r\n  else {\r\n    uVar1 = 1;\r\n  }\r\n  return uVar1;\r\n}",
+    "name": "isupper",
+    "description": "Checks if a character is an uppercase letter."
+  },
+  {
+    "code": "undefined8 mystery_function(int param_1)\r\n{\r\n  int iVar1;\r\n  undefined8 uVar2;\r\n  iVar1 = isupper(param_1);\r\n  if ((iVar1 == 0) && ((param_1 < 0x61 || (0x7a < param_1)))) {\r\n    uVar2 = 0;\r\n  }\r\n  else {\r\n    uVar2 = 1;\r\n  }\r\n  return uVar2;\r\n}",
+    "name": "isalpha",
+    "description": "Checks if a character is an alphabetic letter."
+  },
+  {
+    "code": "int mystery_function(char *param_1)\r\n{\r\n  int iVar1;\r\n  char *local_20;\r\n  int local_10;\r\n  int local_c;\r\n  local_c = 0;\r\n  local_10 = 1;\r\n  local_20 = param_1;\r\n  while( true ) {\r\n    iVar1 = isspace((int)*local_20);\r\n    if (iVar1 == 0) break;\r\n    local_20 = local_20 + 1;\r\n  }\r\n  if (*local_20 == '-') {\r\n    local_10 = -1;\r\n    local_20 = local_20 + 1;\r\n  }\r\n  else if (*local_20 == '+') {\r\n    local_20 = local_20 + 1;\r\n  }\r\n  while( true ) {\r\n    iVar1 = isdigit((int)*local_20);\r\n    if (iVar1 == 0) break;\r\n    local_c = *local_20 + -0x30 + local_c * 10;\r\n    local_20 = local_20 + 1;\r\n  }\r\n  return local_10 * local_c;\r\n}",
+    "name": "atoi",
+    "description": "Converts a string to an integer."
+  },
+  {
+    "code": "long mystery_function(char *param_1)\r\n{\r\n  int iVar1;\r\n  char *local_20;\r\n  int local_14;\r\n  long local_10;\r\n  local_10 = 0;\r\n  local_14 = 1;\r\n  local_20 = param_1;\r\n  while( true ) {\r\n    iVar1 = isspace((int)*local_20);\r\n    if (iVar1 == 0) break;\r\n    local_20 = local_20 + 1;\r\n  }\r\n  if (*local_20 == '-') {\r\n    local_14 = -1;\r\n    local_20 = local_20 + 1;\r\n  }\r\n  else if (*local_20 == '+') {\r\n    local_20 = local_20 + 1;\r\n  }\r\n  while( true ) {\r\n    iVar1 = isdigit((int)*local_20);\r\n    if (iVar1 == 0) break;\r\n    local_10 = (long)(*local_20 + -0x30) + local_10 * 10;\r\n    local_20 = local_20 + 1;\r\n  }\r\n  return local_14 * local_10;\r\n}",
+    "name": "atol",
+    "description": "Converts a string to a long integer."
+  },
+  {
+    "code": "ulong mystery_function(char *param_1,undefined8 *param_2,int param_3)\r\n{\r\n  char *pcVar1;\r\n  bool bVar2;\r\n  int iVar3;\r\n  ulong uVar4;\r\n  int local_4c;\r\n  int local_24;\r\n  int local_1c;\r\n  ulong local_18;\r\n  char *local_10;\r\n  bVar2 = false;\r\n  pcVar1 = param_1;\r\n  do {\r\n    local_10 = pcVar1;\r\n    pcVar1 = local_10 + 1;\r\n    local_1c = (int)*local_10;\r\n    iVar3 = isspace(local_1c);\r\n  } while (iVar3 != 0);\r\n  if (local_1c == 0x2d) {\r\n    bVar2 = true;\r\n    local_1c = (int)*pcVar1;\r\n    pcVar1 = local_10 + 2;\r\n  }\r\n  else if (local_1c == 0x2b) {\r\n    local_1c = (int)*pcVar1;\r\n    pcVar1 = local_10 + 2;\r\n  }\r\n  local_10 = pcVar1;\r\n  local_4c = param_3;\r\n  if ((((param_3 == 0) || (param_3 == 0x10)) && (local_1c == 0x30)) &&\r\n     ((*local_10 == 'x' || (*local_10 == 'X')))) {\r\n    local_1c = (int)local_10[1];\r\n    local_10 = local_10 + 2;\r\n    local_4c = 0x10;\r\n  }\r\n  if (local_4c == 0) {\r\n    if (local_1c == 0x30) {\r\n      local_4c = 8;\r\n    }\r\n    else {\r\n      local_4c = 10;\r\n    }\r\n  }\r\n  if (bVar2) {\r\n    uVar4 = 0x80000000;\r\n  }\r\n  else {\r\n    uVar4 = 0x7fffffff;\r\n  }\r\n  local_18 = 0;\r\n  local_24 = 0;\r\n  do {\r\n    iVar3 = isdigit(local_1c);\r\n    if (iVar3 == 0) {\r\n      iVar3 = isalpha(local_1c);\r\n      if (iVar3 == 0) {\r\nLAB_00100a41:\r\n        if (local_24 < 0) {\r\n          if (bVar2) {\r\n            local_18 = 0xffffffff80000000;\r\n          }\r\n          else {\r\n            local_18 = 0x7fffffff;\r\n          }\r\n        }\r\n        else if (bVar2) {\r\n          local_18 = -local_18;\r\n        }\r\n        if (param_2 != (undefined8 *)0x0) {\r\n          if (local_24 != 0) {\r\n            param_1 = local_10 + -1;\r\n          }\r\n          *param_2 = param_1;\r\n        }\r\n        return local_18;\r\n      }\r\n      iVar3 = isupper(local_1c);\r\n      if (iVar3 == 0) {\r\n        iVar3 = 0x57;\r\n      }\r\n      else {\r\n        iVar3 = 0x37;\r\n      }\r\n      local_1c = local_1c - iVar3;\r\n    }\r\n    else {\r\n      local_1c = local_1c + -0x30;\r\n    }\r\n    if (local_4c <= local_1c) goto LAB_00100a41;\r\n    if (((local_24 < 0) || (uVar4 / (ulong)(long)local_4c < local_18)) ||\r\n       ((local_18 == uVar4 / (ulong)(long)local_4c &&\r\n        ((int)(uVar4 % (ulong)(long)local_4c) < local_1c)))) {\r\n      local_24 = -1;\r\n    }\r\n    else {\r\n      local_24 = 1;\r\n      local_18 = (long)local_4c * local_18 + (long)local_1c;\r\n    }\r\n    local_1c = (int)*local_10;\r\n    local_10 = local_10 + 1;\r\n  } while( true );\r\n}",
+    "name": "strtol",
+    "description": "Converts a string to a long integer with a specified base."
+  },
+  {
+    "code": "int mystery_function(int param_1)\r\n{\r\n  if (-1 < -param_1) {\r\n    param_1 = -param_1;\r\n  }\r\n  return param_1;\r\n}",
+    "name": "abs",
+    "description": "Computes the absolute value of an integer."
+  },
+  {
+    "code": "long mystery_function(long param_1)\r\n{\r\n  if (-1 < -param_1) {\r\n    param_1 = -param_1;\r\n  }\r\n  return param_1;\r\n}",
+    "name": "labs",
+    "description": "Computes the absolute value of a long integer."
+  },
+  {
+    "code": "uint mystery_function(void)\r\n{\r\n  next = next * 0x41c64e6d + 0x3039;\r\n  return (uint)((ulong)next >> 0x10) & 0x7fff;\r\n}",
+    "name": "rand",
+    "description": "Generates a pseudo-random number."
+  },
+  {
+    "code": "void mystery_function(uint param_1)\r\n{\r\n  next = (ulong)param_1;\r\n  return;\r\n}",
+    "name": "srand",
+    "description": "Seeds the pseudo-random number generator."
+  },
+  {
+    "code": "long mystery_function(undefined8 param_1,long param_2,ulong param_3,long param_4,code *param_5)\r\n{\r\n  int iVar1;\r\n  ulong uVar2;\r\n  long lVar3;\r\n  ulong local_18;\r\n  ulong local_10;\r\n  local_10 = 0;\r\n  uVar2 = param_3;\r\n  while( true ) {\r\n    do {\r\n      local_18 = uVar2;\r\n      if (local_18 <= local_10) {\r\n        return 0;\r\n      }\r\n      uVar2 = local_18 + local_10 >> 1;\r\n      lVar3 = param_2 + uVar2 * param_4;\r\n      iVar1 = (*param_5)(param_1,lVar3);\r\n    } while (iVar1 < 0);\r\n    if (iVar1 < 1) break;\r\n    local_10 = uVar2 + 1;\r\n    uVar2 = local_18;\r\n  }\r\n  return lVar3;\r\n}",
+    "name": "bsearch",
+    "description": "Performs a binary search of a sorted array."
+  },
+  {
+    "code": "void mystery_function(long param_1,ulong param_2,long param_3,code *param_4)\r\n{\r\n  int iVar1;\r\n  undefined8 local_18;\r\n  undefined8 local_10;\r\n  if (1 < param_2) {\r\n    swap_bytes(param_1 + (param_2 >> 1) * param_3,(param_2 - 1) * param_3 + param_1,param_3);\r\n    local_18 = 0;\r\n    for (local_10 = 0; local_10 < param_2 - 1; local_10 = local_10 + 1) {\r\n      iVar1 = (*param_4)(local_10 * param_3 + param_1,(param_2 - 1) * param_3 + param_1);\r\n      if (iVar1 < 0) {\r\n        swap_bytes(local_10 * param_3 + param_1,local_18 * param_3 + param_1,param_3);\r\n        local_18 = local_18 + 1;\r\n      }\r\n    }\r\n    swap_bytes((param_2 - 1) * param_3 + param_1,local_18 * param_3 + param_1,param_3);\r\n    mystery_function(param_1,local_18,param_3,param_4);\r\n    mystery_function((local_18 + 1) * param_3 + param_1,(param_2 - local_18) + -1,param_3,param_4);\r\n  }\r\n  return;\r\n}",
+    "name": "qsort",
+    "description": "Sorts an array using quicksort."
+  },
+  {
+    "code": "void mystery_function(void *param_1)\r\n{\r\n  int iVar1;\r\n  iVar1 = strlen(param_1);\r\n  write(1,param_1,(long)iVar1);\r\n  return;\r\n}",
+    "name": "fputs",
+    "description": "Writes a string to a stream."
+  },
+  {
+    "code": "ssize_t mystery_function(undefined8 param_1)\r\n{\r\n  int iVar1;\r\n  ssize_t sVar2;\r\n  iVar1 = fputs(param_1,0);\r\n  if (iVar1 < 0) {\r\n    sVar2 = 0xffffffff;\r\n  }\r\n  else {\r\n    sVar2 = write(1,&DAT_00100ed0,1);\r\n  }\r\n  return sVar2;\r\n}",
+    "name": "puts",
+    "description": "Writes a string and a newline to stdout."
+  },
+  {
+    "code": "ulong mystery_function(byte param_1)\r\n{\r\n  ssize_t sVar1;\r\n  ulong uVar2;\r\n  byte local_9;\r\n  local_9 = param_1;\r\n  sVar1 = write(1,&local_9,1);\r\n  if (sVar1 == 1) {\r\n    uVar2 = (ulong)local_9;\r\n  }\r\n  else {\r\n    uVar2 = 0xffffffff;\r\n  }\r\n  return uVar2;\r\n}",
+    "name": "putchar",
+    "description": "Writes a character to stdout."
+  },
+  {
+    "code": "ulong mystery_function(void)\r\n{\r\n  ssize_t sVar1;\r\n  ulong uVar2;\r\n  byte local_9;\r\n  sVar1 = read(0,&local_9,1);\r\n  if (sVar1 == 1) {\r\n    uVar2 = (ulong)local_9;\r\n  }\r\n  else {\r\n    uVar2 = 0xffffffff;\r\n  }\r\n  return uVar2;\r\n}",
+    "name": "getchar",
+    "description": "Reads a character from stdin."
+  }
+]
