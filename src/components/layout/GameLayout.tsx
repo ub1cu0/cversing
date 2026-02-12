@@ -31,7 +31,7 @@ export default function GameLayout({ children }: GameLayoutProps) {
                         </span>
                     </Link>
 
-                    <nav className="hidden md:flex items-center gap-1">
+                    <nav className="flex items-center gap-1">
                         {navItems.map((item) => {
                             const isActive = location.pathname.startsWith(item.path);
                             const Icon = item.icon;
